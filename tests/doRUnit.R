@@ -15,7 +15,7 @@
 ## ----> put the bulk of the code e.g. in  ../inst/unitTests/runTests.R :
 
 if(require("RUnit", quietly = TRUE)) {
-  pkg <- "package_template_runit"
+  pkg <- "packageTemplateRUnit"
                                        
   require( pkg, character.only=TRUE)
   
