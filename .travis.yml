@@ -5,8 +5,9 @@ language: r
 sudo: required
 
 r_packages:
-    - PerformanceAnalytics
+    - RUnit
     - covr
+#    - PerformanceAnalytics
 
 #install:     
 #r_github_packages:
