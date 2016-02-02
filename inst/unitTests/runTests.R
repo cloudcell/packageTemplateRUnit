@@ -1,6 +1,7 @@
 # borrowed from rcppgsl
 
-pkg <- "package_template_runit"  # set package name here
+# TODO: set this package name globally ONCE ONLY!
+pkg <- "packageTemplateRUnit"  # set package name here
 
 if(require("RUnit", quietly = TRUE)) {
 
