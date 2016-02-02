@@ -16,3 +16,12 @@ https://github.com/eddelbuettel/rcppgsl
 
 GPL (>= 2)
 
+### Further Work
+
+Integrate GitVersion  
+https://github.com/GitTools/GitVersion  
+http://stackoverflow.com/questions/6920548/is-it-possible-to-add-a-version-number-using-git-github  
+http://programmers.stackexchange.com/questions/141973/how-do-you-achieve-a-numeric-versioning-scheme-with-git  
+
+
+
