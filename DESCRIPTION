@@ -2,8 +2,7 @@ Package: packageTemplateRUnit
 Title: RUnit Based R Package and Repository Template
 Version: 0.0.1.0001
 Authors@R: person("cloudcello", "_", email = "ef256aff@opayq.com", role = c("aut", "cre"))
-Description: package/github repo template
+Description: This package/repo template is already integrated with travis and codecov.
 License: GPL-3
 LazyData: true
 Copyright: (c) 2016
-RoxygenNote: 5.0.1
