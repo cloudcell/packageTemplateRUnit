@@ -1,0 +1,10 @@
+Package: package_template_runit
+Title: RUnit-Based R Package / Repository Template
+Version: 0.0.1.0001
+Authors@R: person("cloudcello", "_", email = "ef256aff@opayq.com", role = c("aut", "cre"))
+Description: package/github repo template
+License: GPL-3
+LazyData: true
+Copyright: (c) 2015-16
+RoxygenNote: 5.0.1
+
