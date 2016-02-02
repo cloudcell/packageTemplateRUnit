@@ -16,6 +16,10 @@ https://github.com/eddelbuettel/rcppgsl
 
 GPL (>= 2)
 
+### References
+
+http://dirk.eddelbuettel.com/papers/r_package_development_nov2014.pdf
+
 ### Further Work
 
 Integrate GitVersion  
