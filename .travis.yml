@@ -1,34 +1,58 @@
-# borrowed from the package RcppGSL
 
-# Sample .travis.yml for R projects.
-#
-# See https://github.com/craigcitro/r-travis
-#     https://github.com/eddelbuettel/r-travis/
 
-language: c
+language: r
+#warnings_are_errors: true
+sudo: required
 
-env:
-  global:
-    - R_BUILD_ARGS="--no-build-vignettes --no-manual"
-    - R_CHECK_ARGS="--no-build-vignettes --no-manual --as-cran"
-    - _R_CHECK_FORCE_SUGGESTS_=FALSE
+r_packages:
+    - PerformanceAnalytics
+    - covr
 
-before_install:
-  ## PPA for Rcpp and some other packages
-  - sudo add-apt-repository -y ppa:edd/misc
-  ## r-travis by Craig Citro et al
-  - curl -OL http://raw.github.com/craigcitro/r-travis/master/scripts/travis-tool.sh
-  - chmod 755 ./travis-tool.sh
-  - ./travis-tool.sh bootstrap
+#install:     
+#r_github_packages:
+#   - cloudcello/blotter
+#   - cloudcello/quantstrat
 
-install:
-  - ./travis-tool.sh install_aptget r-cran-rcpp r-cran-inline r-cran-highlight libgsl0-dev r-cran-runit
+# works just as well as via "r_packages:"
+#before_script:   
+#  - Rscript -e 'install.packages("covr", repos="http://cran.rstudio.com")'
 
-script:
-  - ./travis-tool.sh run_tests
+after_success:
+    - Rscript -e 'library(covr);codecov()'  
+#  - Rscript -e 'library(rfintools)'
 
-notifications:
-  email:
-    on_success: change
-    on_failure: change
+#-------------------------------------------------------------------------------
+# 'code' below borrowed from rcppgsl repository
+## # Sample .travis.yml for R projects.
+## #
+## # See https://github.com/craigcitro/r-travis
+## #     https://github.com/eddelbuettel/r-travis/
+## 
+## language: c
+## 
+## env:
+##     global:
+##     - R_BUILD_ARGS="--no-build-vignettes --no-manual"
+## - R_CHECK_ARGS="--no-build-vignettes --no-manual --as-cran"
+## - _R_CHECK_FORCE_SUGGESTS_=FALSE
+## 
+## before_install:
+##     ## PPA for Rcpp and some other packages
+##     - sudo add-apt-repository -y ppa:edd/misc
+## ## r-travis by Craig Citro et al
+## - curl -OL http://raw.github.com/craigcitro/r-travis/master/scripts/travis-tool.sh
+## - chmod 755 ./travis-tool.sh
+## - ./travis-tool.sh bootstrap
+## 
+## install:
+##     - ./travis-tool.sh install_aptget r-cran-rcpp r-cran-inline r-cran-highlight libgsl0-dev r-cran-runit
+## 
+## script:
+##     - ./travis-tool.sh run_tests
+## 
+## notifications:
+##     email:
+##     on_success: change
+## on_failure: change
+## 
 
