@@ -1,4 +1,4 @@
-# borrowed from the package rcpp
+# borrowed from the package rcppgsl
 
 #!/usr/bin/r -t
 #                        Emacs make this -*- mode: R; tab-width: 4 -*-
@@ -31,7 +31,7 @@ test.dummyFunction <- function(){
     res <- fx()
     checkEquals(res,
                 "Hello World!",
-                msg = "wrap( gsl_vector )" )
+                msg = "Welcome Test ()" )
 }
 
 

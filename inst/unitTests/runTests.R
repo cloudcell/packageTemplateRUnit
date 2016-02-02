@@ -1,6 +1,8 @@
 # borrowed from rcppgsl
 
-# TODO: set this package name globally ONCE ONLY!
+# TODO: set this package name globally ONCE ONLY! (if that's really needed)
+# This seemingly redundant assignment to "pkg" might be done in case
+# this particular file is launched independently from doRUnit.R
 pkg <- "packageTemplateRUnit"  # set package name here
 
 if(require("RUnit", quietly = TRUE)) {
@@ -45,8 +47,8 @@ if(require("RUnit", quietly = TRUE)) {
         }
 
         # R CMD check uses this
-        if( exists( "Rcpp.unit.test.output.dir", globalenv() ) ){
-            output <- Rcpp.unit.test.output.dir
+        if( exists( "Unit.test.output.dir", globalenv() ) ){
+            output <- Unit.test.output.dir
         } else {
 
             ## give a chance to the user to customize where he/she wants
