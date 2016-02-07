@@ -1,4 +1,4 @@
-# borrowed from the package RcppGSL
+# borrowed from the package RcppGSL with minor adjustments
 
 #### doRUnit.R --- Run RUnit tests
 ####------------------------------------------------------------------------
